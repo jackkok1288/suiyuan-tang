@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隨緣堂 - 命理諮詢</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"></script>
+</head>
+<body class="bg-gray-100" style="background-image: url('https://source.unsplash.com/1600x900/?chinese,landscape'); background-size: cover;">
+    <!-- 導航欄 -->
+    <nav class="bg-white shadow-md p-4">
+        <div class="container mx-auto flex justify-between">
+            <h1 class="text-xl font-bold">隨緣堂</h1>
+            <ul class="flex space-x-4">
+                <li><a href="#home" class="hover:text-blue-500">首頁</a></li>
+                <li><a href="#bazi" class="hover:text-blue-500">八字</a></li>
+                <li><a href="#ziwei" class="hover:text-blue-500">紫微斗數</a></li>
+                <li><a href="#fengshui" class="hover:text-blue-500">風水</a></li>
+                <li><a href="#contact" class="hover:text-blue-500">聯絡我們</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 首頁 -->
+    <section id="home" class="text-center py-20 bg-white shadow-md animate__animated animate__fadeIn">
+        <h2 class="text-3xl font-bold">歡迎來到隨緣堂</h2>
+        <p class="text-gray-600 mt-4">探索八字、紫微斗數與風水的奧秘，幫助你掌握人生方向。</p>
+        <img src="https://source.unsplash.com/800x400/?yin-yang" class="mt-6 rounded-lg shadow-lg mx-auto" alt="玄學意象">
+    </section>
+
+    <!-- 八字專區 -->
+    <section id="bazi" class="container mx-auto py-10">
+        <h2 class="text-2xl font-bold">八字專區</h2>
+        <button onclick="toggleContent('bazi-content')" class="bg-blue-500 text-white p-2 rounded-lg">展開</button>
+        <div id="bazi-content" class="hidden mt-4">
+            <p class="text-gray-700">八字命理幫助你了解個人天賦、事業、財運與感情。八字源於陰陽五行學說，通過天干地支的組合，推算一個人的性格、運勢與未來發展。</p>
+            <img src="https://source.unsplash.com/800x400/?fengshui" class="mt-4 rounded-lg shadow-lg" alt="八字命理">
+        </div>
+    </section>
+
+    <!-- 紫微斗數專區 -->
+    <section id="ziwei" class="container mx-auto py-10">
+        <h2 class="text-2xl font-bold">紫微斗數專區</h2>
+        <button onclick="toggleContent('ziwei-content')" class="bg-blue-500 text-white p-2 rounded-lg">展開</button>
+        <div id="ziwei-content" class="hidden mt-4">
+            <p class="text-gray-700">透過紫微斗數，解析人生格局與流年變化。</p>
+            <img src="https://source.unsplash.com/800x400/?astrology" class="mt-4 rounded-lg shadow-lg" alt="紫微斗數">
+        </div>
+    </section>
+
+    <!-- 風水專區 -->
+    <section id="fengshui" class="container mx-auto py-10">
+        <h2 class="text-2xl font-bold">風水專區</h2>
+        <button onclick="toggleContent('fengshui-content')" class="bg-blue-500 text-white p-2 rounded-lg">展開</button>
+        <div id="fengshui-content" class="hidden mt-4">
+            <p class="text-gray-700">調整環境氣場，助你趨吉避凶，提升運勢。</p>
+            <img src="https://source.unsplash.com/800x400/?fengshui,home" class="mt-4 rounded-lg shadow-lg" alt="風水學">
+        </div>
+    </section>
+
+    <!-- 聯絡我們 -->
+    <section id="contact" class="container mx-auto py-10">
+        <h2 class="text-2xl font-bold">聯絡我們</h2>
+        <form class="mt-4">
+            <input type="text" placeholder="您的名字" class="block w-full p-2 border rounded-lg mb-2">
+            <input type="email" placeholder="您的郵件" class="block w-full p-2 border rounded-lg mb-2">
+            <textarea placeholder="您的訊息" class="block w-full p-2 border rounded-lg mb-2"></textarea>
+            <button type="submit" class="bg-blue-500 text-white p-2 rounded-lg">提交</button>
+        </form>
+    </section>
+
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+            } else {
+                content.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
